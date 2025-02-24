@@ -1,0 +1,715 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(135deg, #800020, #400020);
+    color: #ffffff;
+}
+footer {
+    background-color: white; /* ����� ��� ��� footer */
+    color: black; /* ׸���� ����� */
+    text-align: center;
+}
+/* ����� ��� �������� */
+.logo {
+    max-width: 70px; /* ������������ ������ �������� */
+    height: auto; /* ���������� ��������� */
+    margin-right: 10px; /* ������ ������ (���� �����) */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+/* �������� ������� */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+    margin-top: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* ����� � ������� � ������������� */
+.text-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+p.fs-5 {
+    color: #ffffff;
+}
+
+.img-block {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* ������� ��������� ������ */
+.main-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.section-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* ����� ��� ����� ����� */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+/* ����� ��� ������ */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff4691, #b5007f); /* ��������� �������� */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(135deg, #e51e7b, #91006f); /* ������ ��������� �������� */
+    }
+
+    button:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+/* ����� ��� ���� */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 100%;
+}
+
+/* ����� ��� ���������� ���� */
+h2, h3 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ����� ��� ��������� �������� */
+p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* ����� ��� ���������� ���� */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    color: #ffffff;
+}
+
+    .modal-content h4 {
+        margin-top: 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+/* ������ ��� ��������� */
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.employees-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.employee-card {
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+.card-title, .card-text {
+    color: black; /* ������������� ������ ���� ������ */
+}
+
+.employee-card .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ��������� ���� ��� ������� ����������� ���������� */
+    transition: transform 0.3s ease; /* ������� ������ ��� ��������� */
+}
+
+.employee-card:hover .card {
+    transform: scale(1.05); /* ��� ��������� ����������� �������� */
+}
+/* ��������� ��� ������ */
+.action-buttons {
+    display: flex; /* �������������� ������������ */
+    gap: 10px; /* ������ ����� �������� */
+    justify-content: center; /* ������������� �� ����������� */
+}
+
+/* ������ �������� */
+.action-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+    .action-btn:hover {
+        transform: scale(1.2);
+    }
+/* ����� ����� ��� ������ */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    text-decoration: none; /* ��� ������ */
+    display: inline-block; /* ����� �������� ������������ */
+}
+
+/* Buttons */
+.btn {
+    border-radius: 50px; /* ������� ����� */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary {
+    background: #c70039; /* ��������� ���� */
+    color: #ffffff; /* ����� ����� */
+}
+
+    .btn-primary:hover {
+        background: #800040; /* ������ ��������� ��� ��������� */
+        transform: scale(1.05); /* ������� ������������� */
+    }
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+    .table th,
+    .table td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ������ ������� ����� �������� */
+        border-right: 1px solid rgba(255, 255, 255, 0.1); /* ������ ������� ����� �������� */
+    }
+
+    .table th {
+        background-color: transparent !important;
+        color: #ffffff;
+    }
+
+    .table tbody tr:hover {
+        background-color: transparent !important;
+    }
+
+    .table tbody tr:last-child td {
+        border-bottom: none; /* ������� ������ ������� ��������� ������ */
+    }
+
+    .table thead th:first-child,
+    .table tbody td:first-child {
+        border-left: none; /* ������� ����� ������� ������ ������� */
+    }
+
+/* ������� */
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+    .status.available {
+        background: #32a852; /* ������� ��� ��������� */
+    }
+
+    .status.unavailable {
+        background: #c70039; /* ������� ��� ����������� */
+    }
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .form-input:focus {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ����� ��� ����������� ������ */
+    .form-input::-ms-expand {
+        display: none; /* ������� ������� �� ��������� � Internet Explorer */
+    }
+
+    .form-input option {
+        background: rgba(255, 255, 255, 0.9); /* ���� ���� ��� ��������� ������ */
+        color: #000000; /* ���� ������ ��� ��������� ������ */
+    }
+/* ����� ��� �������� */
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .form-checkbox input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        accent-color: #c70039; /* ���� ������� �������� */
+        cursor: pointer;
+    }
+
+/* ����� ��� textarea */
+textarea.form-input {
+    resize: vertical; /* ��������� �������� ������ */
+    padding: 15px;
+    font-size: 1rem;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    textarea.form-input:focus {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+/* ������ ����� ������ */
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+/* ����� ��� ���� ������ ����� */
+/* Стиль для поля выбора файла */
+input[type="file"].form-input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="file"].form-input:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* ����� ��������� ��������� */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* ����� ��������� ��������� */
+.custom-pagination {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* ����� ������� �������� ��������� */
+.pagination-item {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+    /* ������ ��������� */
+    .pagination-item:hover:not(.disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* �������� �������� */
+    .pagination-item.active {
+        background: linear-gradient(90deg, #ff7f50, #e93e3e);
+        box-shadow: 0 4px 10px rgba(233, 62, 62, 0.4);
+    }
+
+    /* ����������� �������� */
+    .pagination-item.disabled {
+        background: #ccc;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+/* ����� ��� ������������ ����� */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+    .input-field label {
+        width: 150px; /* ������ ����� */
+        text-align: right;
+    }
+
+/* ������ */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+    .action-buttons button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .action-buttons .secondary-button {
+        background-color: #6c757d;
+        color: white;
+    }
+
+        .action-buttons .secondary-button:hover {
+            background-color: #545b62;
+        }
+
+    .action-buttons .primary-button {
+        background-color: #e83e8c; /* ��������� ���� */
+        color: white;
+    }
+
+        .action-buttons .primary-button:hover {
+            background-color: #d1236a; /* ������ ��������� ��� ��������� */
+        }
+/* ����� ����� ��� ������ */
+.nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+    /* ����� ��� ��������� �� ������ */
+    .nav-link:hover {
+        background: linear-gradient(135deg, #ff4d8c, #ff1a75); /* ��������� �������� */
+        color: white; /* ����� ����� */
+        text-decoration: none; /* ������� ������������� */
+    }
+
+/* �������������� ����� ��� ������ "�����" */
+.nav-item a.logout {
+    color: red; /* ������� ���� �� ��������� */
+}
+
+    .nav-item a.logout:hover {
+        background: linear-gradient(135deg, #ff0033, #cc0066); /* �������� ��� ������ "�����" */
+    }
+/* Общий стиль для элементов навигации */
+.nav-item {
+    display: flex !important; /* Используем Flexbox для выравнивания */
+    align-items: center !important; /* Вертикальное выравнивание */
+    height: 100% !important; /* Высота элемента равна высоте родительского контейнера */
+    margin: 0 !important; /* Убираем внешние отступы */
+    padding: 0 !important; /* Убираем внутренние отступы */
+}
+
+/* Стиль для ссылок (кнопок) */
+.nav-link {
+    display: inline-flex !important; /* Используем Flexbox для внутренних элементов */
+    align-items: center !important; /* Вертикальное выравнивание */
+    height: 100% !important; /* Высота элемента равна высоте родительского контейнера */
+    padding: 0.5rem 1rem !important; /* Единообразные отступы */
+    border-radius: 5px !important; /* Сглаженные углы */
+    text-decoration: none !important; /* Убираем подчеркивание */
+    transition: background-color 0.3s ease, color 0.3s ease !important; /* Плавная анимация */
+}
+/* Стиль для элементов, которые должны выглядеть как обычный текст */
+.nav-link.text-only {
+    background: none !important; /* Убираем фон */
+    border: none !important; /* Убираем границу */
+    padding: 0 !important; /* Убираем отступы */
+    color: black !important; /* Черный цвет текста */
+    text-decoration: none !important; /* Убираем подчеркивание */
+    cursor: default !important; /* Изменяем курсор на стандартный */
+}
+
+/* Стиль для разделителя */
+.nav-link.text-only.separator {
+    margin: 0 10px !important; /* Добавляем отступы слева и справа */
+}
+.action-icons {
+    display: flex;
+    gap: 10px; /* Расстояние между иконками */
+}
+
+.action-icon {
+    color: #007bff; /* Цвет иконок */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.action-icon:hover {
+    color: #0056b3; /* Цвет при наведении */
+}
+
+.view-icon {
+    color: #17a2b8; /* Цвет для иконки просмотра */
+}
+
+.edit-icon {
+    color: #28a745; /* Цвет для иконки редактирования */
+}
+
+.delete-icon {
+    color: #dc3545; /* Цвет для иконки удаления */
+}
+/* Большие поля ввода */
+.form-input-lg {
+    font-size: 1.2rem;
+    padding: 20px;
+    height: auto; /* Автоматическая высота */
+}
+
+/* Увеличенный размер textarea */
+textarea.form-input-lg {
+    resize: vertical; /* Возможность изменять высоту */
+    padding: 15px;
+    font-size: 1.2rem;
+}
+/* Стиль для tbody */
+.table-body {
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+    backdrop-filter: blur(10px); /* Размытие фона */
+}
+/* Кнопка "Удалить" */
+.btn-danger {
+    background: linear-gradient(135deg, #ff4d8c, #ff1a75); /* Градиент красного цвета */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #e51e7b, #91006f); /* Более темный градиент при наведении */
+}
+
+/* Кнопка "Вернуться к списку" */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1); /* Прозрачный белый фон */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2); /* Более светлый фон при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопка "Редактировать" */
+.btn-primary {
+    background: linear-gradient(135deg, #ffc107, #e0a800); /* Градиент желтого цвета */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #e0a800, #b38800); /* Более темный градиент при наведении */
+}
+.table {
+    background-color: transparent !important;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Прозрачный фон для ячеек таблицы с белым текстом */
+.table th,
+.table td {
+    background-color: transparent !important;
+    border: 1px solid #ddd; /* Светлая граница */
+    padding: 8px;
+    text-align: left;
+    color: #ffffff; /* Белый цвет текста */
+}
+
+/* Эффект при наведении на строку */
+.table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05) !important; /* Легкий прозрачный фон при наведении */
+    color: #ffffff; /* Текст остается белым при наведении */
+}

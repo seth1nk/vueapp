@@ -1,0 +1,9 @@
+[build]
+  base = "/"
+  publish = "dist"  # Указывает, что фронтенд находится в папке dist
+  functions = "netlify/functions"  # Указывает, где находятся Serverless Functions
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
