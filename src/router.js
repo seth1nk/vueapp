@@ -6,6 +6,7 @@ import PetList from './components/PetList.vue';
 import PitanieList from './components/PitanieList.vue';
 import Login from './components/Login.vue';
 import Register from './components/Register.vue';
+import ViewPet from '@/components/ViewPet.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -15,6 +16,7 @@ const routes = [
   { path: '/pitanie', component: PitanieList },
   { path: '/login', component: Login },
   { path: '/register', component: Register },
+  { path: '/view-pet/:id', component: ViewPet },
 ];
 
 const router = createRouter({
