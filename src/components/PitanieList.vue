@@ -31,13 +31,13 @@
                 {{ item.in_stock ? 'Да' : 'Нет' }}
               </span>
             </td>
-            <td>
-              <img v-if="pitanie.img"
-                   :src="`${backendUrl}${pitanie.img}`"
-                   alt="Pitanie Image"
-                   class="pitanie-image" />
-              <span v-else>N/A</span>
-            </td>
+<td>
+  <img v-if="item.img"
+       :src="`${backendUrl}${item.img}`"
+       alt="Pitanie Image"
+       class="pitanie-image" />
+  <span v-else>N/A</span>
+</td>
           </tr>
         </tbody>
       </table>
