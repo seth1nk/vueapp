@@ -32,10 +32,10 @@
               </span>
             </td>
             <td>
-              <img v-if="item.img"
-                   :src="`https://node-production-579e.up.railway.app${pitanie.images}`"
-                   alt="Product Image"
-                   class="product-image" />
+              <img v-if="pitanie.img"
+                   :src="`${backendUrl}${pitanie.img}`"
+                   alt="Pitanie Image"
+                   class="pitanie-image" />
               <span v-else>N/A</span>
             </td>
           </tr>
@@ -55,13 +55,14 @@
 
 <script>
   export default {
-    data() {
-      return {
-        pitanie: [], // Массив для хранения данных о питании
-        currentPage: 1, // Текущая страница
-        pageSize: 10, // Количество элементов на странице
-      };
-    },
+  data() {
+    return {
+      pitanie: [],
+      currentPage: 1,
+      pageSize: 10,
+      backendUrl: 'https://node-production-579e.up.railway.app',
+    };
+  },
     computed: {
       // Вычисляемое свойство для получения данных текущей страницы
       paginatedItems() {
